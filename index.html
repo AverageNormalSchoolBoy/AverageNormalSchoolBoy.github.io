@@ -21,7 +21,7 @@
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <!-- TikZJax -->
-  <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+ <script src="https://tikzjax.com/v1/tikzjax.js"></script>
 </head>
 
 <body>
@@ -65,28 +65,7 @@
       <h3>Example: Simple Quiver Diagram</h3>
       <p>This is a basic morphism between lattices, rendered with TikZJax:</p>
 
-      <pre class="tikz">
-\begin{tikzpicture}[->, >=stealth, node distance=1.5cm, auto]
-  \node (L0) {$0_L$};
-  \node (L1) [above of=L0] {$a$};
-  \node (L2) [above of=L1] {$1_L$};
 
-  \node (M0) [right of=L0] {$0_M$};
-  \node (M1) [right of=L1] {$b$};
-  \node (M2) [right of=L2] {$1_M$};
-
-  \draw (L0) -- (L1) -- (L2);
-  \draw (M0) -- (M1) -- (M2);
-  \draw[dashed] (L0) -- (M0);
-  \draw[dashed] (L1) -- (M1);
-  \draw[dashed] (L2) -- (M2);
-\end{tikzpicture}
-      </pre>
-
-      <p>
-        TikZJax renders this diagram dynamically in the browser. Dashed arrows indicate
-        a lattice homomorphism preserving joins and meets.
-      </p>
 
       <h3>Other Interests</h3>
       <p>
