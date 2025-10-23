@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #222;
+  background: #f9f9f9;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #002b5c;
+  color: #fff;
+  padding: 2rem 1rem;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar h1 {
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 2rem 0;
+}
+
+.sidebar nav a {
+  color: #cde3ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sidebar nav a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.headshot {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: -1px 0 3px rgba(0,0,0,0.1);
+}
+
+.content h2, .content h3 {
+  color: #002b5c;
+}
+
+a {
+  color: #004aad;
+}
+
+.contact {
+  margin-top: auto;
+  font-size: 0.9em;
+  text-align: center;
+  color: #dce9ff;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
