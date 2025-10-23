@@ -4,26 +4,23 @@
   <meta charset="UTF-8">
   <title>Research | Your Name</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/style.css">
 
-  <!-- MathJax for LaTeX -->
+  <!-- MathJax -->
   <script>
     window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']]
-      },
+      tex: { inlineMath: [['$', '$']] },
       svg: { fontCache: 'global' }
     };
   </script>
   <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-
-  <!-- TikZJax for diagrams -->
-  <script src="https://tikzjax.com/v1/tikzjax.js"></script>
 </head>
 
 <body>
   <div class="container">
+    <!-- Sidebar -->
     <aside class="sidebar">
       <img src="assets/headshot.jpg" alt="Portrait" class="headshot">
       <h1>Your Name</h1>
@@ -42,84 +39,29 @@
       </div>
     </aside>
 
+    <!-- Main Content -->
     <main class="content">
       <h2>Research Overview</h2>
       <p>
-        My work focuses on order-theoretic and categorical aspects of lattices,
-        with applications to algebraic geometry and model theory.
+        My research focuses on lattice theory, quiver representations, and category theory.
+        I study structures such as distributive lattices, posets, and their morphisms.
       </p>
 
+      <h3>Example Problem</h3>
       <p>
-        Specifically, I study the correspondence between algebraic structures and
-        the topological spaces they induce. For instance, the lattice of ideals of
-        a ring can be analyzed using morphisms between distributive lattices, which
-        can be represented diagrammatically.
-      </p>
-
-      <h3>Example: Morphisms of a Finite Lattice</h3>
-      <p>
-        Below is a simple quiver representing a morphism between lattices $L$ and $M$.
-      </p>
-
-      <pre class="tikz">
-\begin{tikzpicture}[->, >=stealth, node distance=1.5cm, auto]
-  \node (L1) at (0,0) {$0_L$};
-  \node (L2) at (0,1.5) {$a$};
-  \node (L3) at (0,3) {$1_L$};
-
-  \node (M1) at (3,0) {$0_M$};
-  \node (M2) at (3,1.5) {$b$};
-  \node (M3) at (3,3) {$1_M$};
-
-  \draw (L1) -- (L2) -- (L3);
-  \draw (M1) -- (M2) -- (M3);
-  \draw[dashed] (L1) -- (M1);
-  \draw[dashed] (L2) -- (M2);
-  \draw[dashed] (L3) -- (M3);
-\end{tikzpicture}
-      </pre>
-
-      <p>
-        This simple diagram corresponds to a lattice homomorphism preserving joins
-        and meets, indicated by the dashed arrows. TikZJax renders this diagram
-        dynamically in the browser.
-      </p>
-
-      <h3>Another Example: A Commutative Square</h3>
-
-      <pre class="tikz">
-\begin{tikzpicture}[node distance=2cm, auto]
-  \node (A) {$A$};
-  \node (B) [right of=A] {$B$};
-  \node (C) [below of=A] {$C$};
-  \node (D) [below of=B] {$D$};
-
-  \draw[->] (A) to node[above] {$f$} (B);
-  \draw[->] (A) to node[left] {$g$} (C);
-  \draw[->] (B) to node[right] {$h$} (D);
-  \draw[->] (C) to node[below] {$k$} (D);
-\end{tikzpicture}
-      </pre>
-
-      <p>
-        In categorical terms, this diagram commutes if $h \circ f = k \circ g$.
-        You can mix LaTeX math and TikZ freely within your pages.
-      </p>
-
-      <h3>Long-Term Directions</h3>
-      <p>
-        I'm currently exploring how certain lattice embeddings can be characterized
-        via functors on the category of finite posets, with attention to how limits
-        and colimits behave under these embeddings.
-      </p>
-
-      <p>
-        Mathematically, this means analyzing constructions of the form
+        Investigating when join-preserving maps satisfy:
         $$
-        \varprojlim_{i \in I} L_i, \quad \varinjlim_{j \in J} M_j
+        f\left(\bigvee_{i \in I} x_i\right) = \bigvee_{i \in I} f(x_i)
         $$
-        and understanding how they interact under morphisms preserving joins
-        and meets.
+      </p>
+
+      <h3>Sample Diagram</h3>
+      <p>Placeholder for lattice/quiver diagram (use SVG):</p>
+      <img src="assets/diagram1.svg" alt="Sample lattice diagram" />
+
+      <h3>Other Interests</h3>
+      <p>
+        Functional analysis, spectral theory, and integrability in infinite-dimensional spaces.
       </p>
     </main>
   </div>
