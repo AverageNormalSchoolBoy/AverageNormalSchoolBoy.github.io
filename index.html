@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Name | Mathematics PhD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/style.css">
+
+  <!-- MathJax for LaTeX rendering -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <img src="assets/headshot.jpg" alt="Portrait" class="headshot">
+      <h1>Your Name</h1>
+      <p><em>PhD Candidate in Mathematics</em><br>[University Name]</p>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="teaching.html">Teaching</a>
+        <a href="cv.html">CV</a>
+      </nav>
+
+      <div class="contact">
+        <p><a href="mailto:you@university.edu">you@university.edu</a></p>
+        <p><a href="https://github.com/username">GitHub</a> · 
+           <a href="https://scholar.google.com/">Google Scholar</a></p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h2>About Me</h2>
+      <p>
+        I am a PhD student in mathematics at [University Name], advised by
+        <a href="#">Prof. [Advisor]</a>. My research interests include
+        [broad field(s)], particularly [specific focus area].
+      </p>
+
+      <p>
+        My current work explores the properties of certain operators acting on
+        function spaces, focusing on convergence and integrability questions.
+        For example, I am studying when
+        $$
+        \int_{0}^{1} f_n(x)\,dx \to \int_{0}^{1} f(x)\,dx
+        $$
+        under various hypotheses on $\{f_n\}$.
+      </p>
+
+      <p>
+        You can find details of my current projects on the <a href="research.html">Research</a> page.
+      </p>
+    </main>
+  </div>
+</body>
+</html>
