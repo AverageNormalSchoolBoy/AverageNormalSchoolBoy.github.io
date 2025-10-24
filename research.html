@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Research | Your Name</title>
-  <link rel="stylesheet" href="style.css">
 
-  <!-- MathJax for LaTeX -->
+  <!-- MathJax -->
   <script>
     MathJax = {
       tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
@@ -17,143 +16,77 @@
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <style>
+    :root {
+      --plum: #6d597a;
+      --light-plum: #b197bd;
+      --gray-bg: #f9f9fb;
+      --text-dark: #2c2c34;
+      --text-light: #666;
+    }
+
     body {
       font-family: 'Georgia', serif;
-      background-color: #f7f6f9;
-      color: #2c2c34;
+      color: var(--text-dark);
+      background-color: white;
       margin: 0;
-      padding: 0;
+      display: flex;
+      min-height: 100vh;
     }
 
-    header {
-      background-color: #6d597a;
-      color: white;
-      padding: 1.2rem 2rem;
-      text-align: center;
+    /* Sidebar */
+    aside {
+      background: var(--gray-bg);
+      border-right: 1px solid #e4e4e8;
+      width: 230px;
+      padding: 2rem 1rem;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
     }
 
-    nav {
-      text-align: center;
-      margin: 1.5rem 0;
+    aside h2 {
+      color: var(--plum);
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
     }
 
     nav a {
-      color: #6d597a;
+      display: block;
+      color: var(--text-dark);
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: 600;
+      margin: 0.5rem 0;
+      padding: 0.3rem 0.5rem;
+      border-radius: 6px;
+      transition: background 0.2s;
     }
 
     nav a:hover {
-      color: #8d7096;
+      background: var(--light-plum);
+      color: white;
     }
 
+    /* Main Content */
     main {
+      margin-left: 250px;
+      padding: 2rem 3rem;
       max-width: 800px;
-      margin: 0 auto;
-      padding: 1.5rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
 
     h1 {
-      color: #4a3f55;
-      font-size: 2em;
+      color: var(--plum);
+      border-bottom: 2px solid var(--light-plum);
+      padding-bottom: 0.4rem;
       margin-top: 0;
-      border-bottom: 2px solid #d8cde3;
-      padding-bottom: 0.5rem;
     }
 
     h2 {
-      color: #6d597a;
-      margin-top: 2rem;
+      color: var(--plum);
+      margin-top: 2.2rem;
+      font-size: 1.3rem;
     }
 
-    p {
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      color: #777;
-      font-size: 0.9em;
-      margin: 2rem 0 1rem 0;
-    }
-  </style>
-</head>
-
-<body>
- <div class="container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="assets/headshot.jpg" alt="Portrait" class="headshot">
-      <h1>Your Name</h1>
-      <p><em>PhD Candidate in Mathematics</em><br>[University Name]</p>
-
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="research.html">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="teaching.html">Teaching</a>
-        <a href="cv.html">CV</a>
-      </nav>
-
-      <div class="contact">
-        <p><a href="mailto:you@university.edu">you@university.edu</a></p>
-      </div>
-    </aside>
-
-  <main>
-    <h1>Research</h1>
-
-    <p>
-      I am a PhD student in mathematics interested in lattice theory,
-      category theory, and the algebraic structures that arise in
-      combinatorial representation theory. My current work explores how
-      morphisms between finite lattices reflect structural symmetries
-      and topological properties.
-    </p>
-
-    <h2>Current Projects</h2>
-    <ul>
-      <li>
-        <strong>Canonical morphisms in modular lattices.</strong>
-        Studying the hom-structure between distributive and modular
-        lattices with attention to categorical dualities.
-      </li>
-      <li>
-        <strong>Quiver diagrams and order-preserving maps.</strong>
-        An exploration of how directed graphs encode morphisms of
-        partially ordered sets and their representations.
-      </li>
-    </ul>
-
-    <h2>Selected Notes</h2>
-    <p>
-      Some of my notes are available below:
-    </p>
-    <ul>
-      <li><a href="#">On join-irreducibles and congruence lattices</a></li>
-      <li><a href="#">Quiver representations in ordered settings</a></li>
-    </ul>
-
-    <h2>Mathematical Interests</h2>
-    <p>
-      Broadly speaking, I’m interested in the algebraic and categorical
-      underpinnings of order structures. Specific topics include:
-    </p>
-    <ul>
-      <li>Finite lattices and congruence relations</li>
-      <li>Quiver diagrams and functorial correspondences</li>
-      <li>Homological methods in combinatorics</li>
-      <li>Connections to representation theory and topology</li>
-    </ul>
-
-  </main>
-
-  <footer>
-    &copy; 2025 Your Name · Department of Mathematics
-  </footer>
-</body>
-</html>
+    h3 {
+      color: var(--text-dark);
+      margin-top: 1.2rem;
+      font-size:
